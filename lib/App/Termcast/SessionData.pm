@@ -25,6 +25,7 @@ has buffer => (
     is  => 'rw',
     isa => 'Str',
 
+    default => '',
     traits  => ['String'],
     handles => {
         add_text      => 'append',
