@@ -75,7 +75,7 @@ has kiokudb => (
 sub _build_kiokudb {
     my $self = shift;
     die "DSN must be provided" unless $self->dsn;
-    KiokuDB->connect($self->dsn);
+    KiokuDB->connect($self->dsn, create => 1);
 }
 
 has termcast_handles => (
